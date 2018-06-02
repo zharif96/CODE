@@ -158,8 +158,34 @@ getLocation(loc: myLoc)                                                         
 
 
 //ENUMERATION
+enum direction:String {             //Enum initialisation
+    case North = "Go forward"       //member of enum
+    case South = "Go back"          //"Go back" is called raw value
+    case East = "Go right"
+    case West = "Go left"
+}
 
+var dir = direction.West            //assign member of enum to a variable
+print(dir.rawValue)                 //print the raw value associated with dir = direction.West
 
+enum day{                           //without raw value
+    case Mon
+    case Tue
+    case Sat
+    case Sun
+}
+
+var today = day.Sun
+    switch today{
+    case .Mon:
+        print("Today is Monday")
+    case .Tue:
+        print("Today is Tuesday")
+    case .Sat:
+        print("Today is Saturday")
+    case .Sun:
+        print("Today is Sunday")
+}
 
 
 
