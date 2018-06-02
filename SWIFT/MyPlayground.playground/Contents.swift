@@ -148,14 +148,19 @@ struct userLocation{                                                            
     var longitude : Double
     var latitude : Double
 }
+func getLocation(loc:userLocation){                                             //function with struct as parameter
+    print(loc.name)
+}
 
 var myLoc = userLocation(name: "Zharif", longitude: 22.04, latitude: 28.03)     //assign struct to a struct variable named 'myLoc'
 
-func getLocation(loc:userLocation){                                             //function with struct as parameter
-print(loc.name)
-}
+getLocation(loc: myLoc)                                                         //call the function
 
-getLocation(loc: myLoc)
+
+//ENUMERATION
+
+
+
 
 
 
