@@ -77,9 +77,85 @@ myDict["red"] = "angry"                         //change value of key
 myDict.removeValue(forKey: "yellow")            //remove value for key "yellow"
 myDict.count                                    //count number of key in dictionary
 
+//FOR LOOP
+var shoppingList = ["oranges","apples","banana"]
+var legend = ["blue":"ocean","green":"land","red":"hell"]
+
+for num in 1...10{                              //for loop for number
+print(num)
+}
+for num in stride(from: 0 , to: 10, by: 2){     //for loop with increment/decrement
+print(num)
+}
+for item in shoppingList {                      //for loop for array
+print(item)
+}
+for item in legend {                            //for loop for dict
+print(item.key)                                 //print key only
+print(item.value)                               //print value only
+}
+for (index,value) in legend.enumerated() {      //enum function, use index of array/dict
+print(index)
+print(value)
+}
+
+//WHILE LOOP & DO WHILE LOOP
+var counter = 0
+while counter < 10{         //while loop
+    print(counter)
+    counter += 1
+}
+
+repeat{                     //do while loop
+    print(counter)
+    counter += 1
+} while counter < 10
 
 
+//SWITCH STATEMENT
+switch age{
+    case 15:
+        print("Take PMR")
+    case 17:
+        print("Take SPM")
+    default:
+        print("You are too old")
+}
 
+for i in 1...5{
+    if i == 3 {
+        continue            //if continue, it skip to the next iteration. whatever code underneat it will not run
+    }
+    print(i)
+}
+
+//FUNCTION
+func addition(num1: Int, num2: Int){            //void function
+    print(num1 + num2)
+}
+addition(num1: 5, num2: 6)
+
+func multiply(num1: Int, num2: Int) -> Int {    //return function
+    return num1 * num2
+}
+var result = multiply(num1: 3, num2: 5)
+print(result)
+
+
+//STRUCT
+struct userLocation{                                                            //struct initialisation
+    var name : String
+    var longitude : Double
+    var latitude : Double
+}
+
+var myLoc = userLocation(name: "Zharif", longitude: 22.04, latitude: 28.03)     //assign struct to a struct variable named 'myLoc'
+
+func getLocation(loc:userLocation){                                             //function with struct as parameter
+print(loc.name)
+}
+
+getLocation(loc: myLoc)
 
 
 
