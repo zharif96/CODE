@@ -94,7 +94,7 @@ for item in legend {                            //for loop for dict
 print(item.key)                                 //print key only
 print(item.value)                               //print value only
 }
-for (index,value) in legend.enumerated() {      //enum function, use index of array/dict
+for (index,value) in shoppingList.enumerated() {      //enum function, use index of array/dict
 print(index)
 print(value)
 }
@@ -102,12 +102,12 @@ print(value)
 //WHILE LOOP & DO WHILE LOOP
 var counter = 0
 while counter < 10{         //while loop
-    print(counter)
+    print(counter)          //print 1 to 9
     counter += 1
 }
 
 repeat{                     //do while loop
-    print(counter)
+    print(counter)          //print 10
     counter += 1
 } while counter < 10
 
@@ -175,7 +175,7 @@ enum day{                           //without raw value
     case Sun
 }
 
-var today = day.Sun
+var today = day.Mon
     switch today{
     case .Mon:
         print("Today is Monday")
@@ -186,6 +186,26 @@ var today = day.Sun
     case .Sun:
         print("Today is Sunday")
 }
+
+
+//Classes
+class Person {                                                                  //class initialisation
+    var name : String                                                           //class attributes
+    var age : Int
+    
+    init(name: String, age: Int) {                                              //constructor
+        self.name = name
+        self.age = age
+    }
+    
+    func greeting(){                                                            //class method
+        print("Hi. My name is \(self.name) and I am \(self.age) years old")
+    }
+}
+
+var person1 = Person(name: "Zharif", age: 22)                                   //object initialisation
+person1.greeting()
+
 
 
 
