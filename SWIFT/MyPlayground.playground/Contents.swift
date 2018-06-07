@@ -207,6 +207,35 @@ var person1 = Person(name: "Zharif", age: 22)                                   
 person1.greeting()
 
 
+//Inheritance and Override
+class Parent{
+    func parentMethod() {
+        print("This is parent method")
+    }
+    
+    func getName(){
+    print("I am a parent")
+    }
+}
+
+class Child: Parent {                       //Child class inherit parent class
+    func childMethod(){
+        print("This is child method")
+    }
+    
+     override func getName() {               //method named 'getName' already exist in parent. To change it, we need to override the method
+        print("I am a child")
+    }
+}
+
+var parent = Parent()
+parent.parentMethod()
+
+var child = Child()
+child.childMethod()
+child.parentMethod()                        //child class can access method in parent class because it inherit the parent
+child.getName()
+
 
 
 
